@@ -1,0 +1,12 @@
+version: "2"
+services: 
+  django-httpd_test:
+    build: . 
+    container_name: django_test
+    command: python manage.py runserver 0.0.0.0:8001
+    ports:
+      - '8001:8001'
+
+
+    volumes:
+      - $PWD/djangotest:/var/www/html
