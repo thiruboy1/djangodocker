@@ -6,6 +6,7 @@ RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 WORKDIR /var/www/html
 COPY ./requirements.txt /var/www/html
+COPY ./djangotest /var/www/html
 COPY ./djangotest /var/www/
 ADD script.sh /
 
